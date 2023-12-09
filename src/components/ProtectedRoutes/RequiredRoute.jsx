@@ -27,6 +27,6 @@ export default function RequiredRoute() {
     return (cookies.logged_in || !isFetching && data) ? (
         <Outlet />
     ) : (
-        <Navigate to="/admin/login" state={{ from: location }} replace />
+        <Navigate to="/login" state={{ from: location }} replace />
     )
 }
