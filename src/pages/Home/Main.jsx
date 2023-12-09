@@ -1,0 +1,49 @@
+import LayoutDB from "../../components/LayoutDashBoard/LayoutDB"
+
+export default function Main() {
+  return (
+    <LayoutDB>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+      <p>Main</p>
+    </LayoutDB>
+  )
+}

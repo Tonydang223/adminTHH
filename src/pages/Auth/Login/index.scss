@@ -1,0 +1,28 @@
+
+.wrapperForm {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    .logo-login {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 35px;
+        img {
+            width: 130px;
+        }
+    }
+    .boxForm {
+        width: 350px;
+        background: #fff;
+        padding: 30px 30px 10px 30px;
+        border-radius: 10px;
+    }
+    
+}
+
+
+.ant-form-item-explain-error {
+    font-size: 12px;
+}

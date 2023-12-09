@@ -1,0 +1,17 @@
+p {
+  color: blue;
+}
+body, #root {
+  background-color: #FAF9F6;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
