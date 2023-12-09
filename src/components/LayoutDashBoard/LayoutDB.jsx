@@ -42,7 +42,7 @@ export default function LayoutDB(props) {
   const [logout, { isSuccess, isLoading }] = useLogoutMutation();
 
   useEffect(() => {
-    setCurrent(`${location.pathname.split('/').flatMap(i => [i,'/']).slice(1, 5).join('')}`);
+    setCurrent(`/${location.pathname.split('/')[1]}`);
   }, [location.pathname]);
 
   const setCurrentMenu = (e) => {
@@ -51,7 +51,7 @@ export default function LayoutDB(props) {
 
   useEffect(() => {
     if (isSuccess) {
-      navigate("/admin/login");
+      navigate("/login");
       window.location.reload(false);
     }
   }, [isLoading]);
@@ -126,27 +126,27 @@ export default function LayoutDB(props) {
             {
               label: "Home",
               icon: <IoHome />,
-              key: "/admin",
+              key: "/",
             },
             {
               label: "User",
               icon: <FaUser />,
-              key: "/admin/user",
+              key: "/user",
             },
             {
               label: "Product",
               icon: <FaStoreAlt />,
-              key: "/admin/product",
+              key: "/product",
             },
             {
               label: "Post",
               icon: <MdPostAdd />,
-              key: "/admin/post",
+              key: "/post",
             },
             {
               label: "Course",
               icon: <IoBookSharp />,
-              key: "/admin/course",
+              key: "/course",
             },
           ]}
         />

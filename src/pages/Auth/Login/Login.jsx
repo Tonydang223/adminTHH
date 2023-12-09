@@ -24,7 +24,7 @@ export default function Login() {
   useEffect(() => {
     if (loginResults.isSuccess) {
       if (loginResults.data?.user?.role === 1) {
-        navigate("/admin");
+        navigate("/");
         message.success("Đăng nhập thành công !");
       } else {
         message.error("Xin lỗi bạn không phải Admin !");

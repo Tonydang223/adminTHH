@@ -38,7 +38,7 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
           result = await baseQuery(args, api, extraOptions);
         } else {
           api.dispatch(logOut());
-          window.location.href = "/admin/login";
+          window.location.href = "/login";
         }
       } finally {
         // release must be called once the mutex should be released again.

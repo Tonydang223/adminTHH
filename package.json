@@ -2,7 +2,6 @@
   "name": "admin",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/admin",
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@ckeditor/ckeditor5-alignment": "^40.1.0",
