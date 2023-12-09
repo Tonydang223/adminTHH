@@ -22,29 +22,29 @@ export default function MainPages() {
     <>
       <Routes>
         <Route element={<RequiredRoute />}>
-          <Route path="/admin" element={<Main />} />
+          <Route path="/" element={<Main />} />
 
-          <Route path="admin/course" element={<MainCourseLayout />}>
+          <Route path="course" element={<MainCourseLayout />}>
             <Route index element={<Courses />} />
             <Route path="add" element={<AddCourse />} />
             <Route path="detail/:id" element={<DetailCourse />} />
           </Route>
 
-          <Route path="admin/product" element={<MainProductLayout />}>
+          <Route path="product" element={<MainProductLayout />}>
             <Route index element={<MainProduct />} />
             <Route path="add" element={<AddProduct />} />
             <Route path="add/:productId" element={<AddProduct />} />
           </Route>
 
-          <Route path="admin/post" element={<MainLayoutPost />} > 
+          <Route path="post" element={<MainLayoutPost />} > 
              <Route index element={<MainPost />} />
              <Route path="add" element={<AddPost />} />
              <Route path="add/:postId" element={<AddPost />} />
            </Route>
-          <Route path="admin/user" element={<MainUser />} />
-          <Route path="admin/profile" element={<Profile />} />
+          <Route path="user" element={<MainUser />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
-        <Route path="admin/login" element={<Login />} />
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <ModalFirm />
