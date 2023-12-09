@@ -52,15 +52,14 @@ export default function LayoutDB(props) {
   useEffect(() => {
     if (isSuccess) {
       navigate("/login");
-      window.location.reload(false);
     }
   }, [isLoading]);
 
   const setCurSubMeuProfile = (e) => {
     setCurrentProfileSubMeu(e.key);
-    if (e.key === "/admin/profile") {
+    if (e.key === "/profile") {
       navigate(e.key);
-    } else if (e.key === "/admin/logout") {
+    } else if (e.key === "/logout") {
       setTimeout(async () => {
         await logout();
       }, 800);
@@ -176,12 +175,12 @@ export default function LayoutDB(props) {
               items: [
                 {
                   label: "Trang Cá Nhân",
-                  key: "/admin/profile",
+                  key: "/profile",
                   icon: <CgProfile />,
                 },
                 {
                   label: "Đăng xuất",
-                  key: "/admin/logout",
+                  key: "/logout",
                   icon: <IoExitOutline />,
                 },
               ],

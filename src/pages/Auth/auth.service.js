@@ -1,7 +1,6 @@
 // Need to use the React-specific entry point to import createApi
 import { createApi } from "@reduxjs/toolkit/query/react";
 import baseQueryWithReauth from "../../api/fetchBaseQuery";
-import { setToken } from "./authSlice";
 
 // Define a service using a base URL and expected endpoints
 export const ApisAuth = createApi({
@@ -14,7 +13,6 @@ export const ApisAuth = createApi({
           url: "auth/login",
           method: "POST",
           body,
-          credentials: "include",
         };
       },
     }),
@@ -22,7 +20,6 @@ export const ApisAuth = createApi({
       query: () => {
         return {
           url: "auth/logout",
-          credentials: "include",
           method: "GET",
         };
       },

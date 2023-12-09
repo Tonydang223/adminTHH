@@ -46,9 +46,8 @@ export default function MainPages() {
             <Route path="user" element={<MainUser />} />
             <Route path="profile" element={<Profile />} />
           </Route>
-          <Route path="login" element={<Login />} />
         </Route>
-
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <ModalFirm />

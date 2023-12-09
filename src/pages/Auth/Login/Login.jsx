@@ -5,15 +5,15 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import logoLogin from "../../../assets/logoMainLogin.png";
 import { useLoginMutation, useLogoutMutation } from "../auth.service";
 import { useEffect,  } from "react";
-import {useSelector} from 'react-redux'
 import { useNavigate } from "react-router-dom";
+import { useCookies } from 'react-cookie'
 const FormItem = Form.Item;
 
 export default function Login() {
   const [login, loginResults] = useLoginMutation();
   const [logout] = useLogoutMutation();
   const navigate = useNavigate();
-  const {token} = useSelector(state => state.user);
+  const [cookies] = useCookies(["logged_in"]);
 
 
   const handleSubmit = async (e) => {
@@ -46,10 +46,10 @@ export default function Login() {
   }, [loginResults.isLoading]);
 
   useEffect(() => {
-    if(token) {
-        navigate('/admin');
+    if(cookies.logged_in) {
+        navigate('/');
     }
-  }, [token])
+  }, [cookies.logged_in])
   return (
     <div className="wrapperForm">
       <div className="boxForm">
