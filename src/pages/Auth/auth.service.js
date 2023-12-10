@@ -20,7 +20,7 @@ export const ApisAuth = createApi({
       query: () => {
         return {
           url: "auth/logout",
-          method: "GET",
+          method: "POST",
         };
       },
     }),
