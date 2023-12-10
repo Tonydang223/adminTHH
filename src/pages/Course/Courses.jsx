@@ -205,7 +205,7 @@ export default function Courses() {
                 await deleteCourseRestoreBack({ ids: dt });
                 setSelectedRowKeys([]);
               } else {
-                navigate(`/admin/course/detail/${course._id}`);
+                navigate(`/course/detail/${course._id}`);
               }
             }}
           >
@@ -280,7 +280,7 @@ export default function Courses() {
                 onChange={onChangeSearch}
               />
               <Button
-                onClick={() => navigate("/admin/course/add")}
+                onClick={() => navigate("/course/add")}
                 type="primary"
                 style={{ marginLeft: "15px" }}
               >

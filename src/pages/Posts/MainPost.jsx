@@ -193,7 +193,7 @@ export default function MainPost() {
                 await deletePostRestoreBack({ ids: dt });
                 setSelectedRowKeys([]);
               } else {
-                navigate(`/admin/post/add/${post._id}`);
+                navigate(`/post/add/${post._id}`);
               }
             }}
           >
@@ -268,7 +268,7 @@ export default function MainPost() {
                 onChange={onChangeSearch}
               />
               <Button
-                onClick={() => navigate("/admin/post/add")}
+                onClick={() => navigate("/post/add")}
                 type="primary"
                 style={{ marginLeft: "15px" }}
               >

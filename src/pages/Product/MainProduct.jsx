@@ -182,7 +182,7 @@ export default function MainProduct() {
                 await deleteProductRestoreBack({ ids: dt });
                 setSelectedRowKeys([]);
               } else {
-                navigate(`/admin/product/add/${product._id}`);
+                navigate(`/product/add/${product._id}`);
               }
             }}
           >
@@ -273,7 +273,7 @@ export default function MainProduct() {
               />
               {!recycles && (
                 <Button
-                  onClick={() => navigate("/admin/product/add")}
+                  onClick={() => navigate("/product/add")}
                   type="primary"
                   style={{ marginLeft: "15px" }}
                 >
