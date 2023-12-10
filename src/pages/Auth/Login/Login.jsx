@@ -6,14 +6,16 @@ import logoLogin from "../../../assets/logoMainLogin.png";
 import { useLoginMutation, useLogoutMutation } from "../auth.service";
 import { useEffect,  } from "react";
 import { useNavigate } from "react-router-dom";
-import { useCookies } from 'react-cookie'
+import {useSelector} from 'react-redux'
+
 const FormItem = Form.Item;
 
 export default function Login() {
   const [login, loginResults] = useLoginMutation();
   const [logout] = useLogoutMutation();
   const navigate = useNavigate();
-  const [cookies] = useCookies(["logged_in"]);
+  const {token} = useSelector(state => state.user);
+
 
 
   const handleSubmit = async (e) => {
@@ -46,10 +48,10 @@ export default function Login() {
   }, [loginResults.isLoading]);
 
   useEffect(() => {
-    if(cookies.logged_in) {
+    if(token) {
         navigate('/');
     }
-  }, [cookies.logged_in])
+  }, [token])
   return (
     <div className="wrapperForm">
       <div className="boxForm">
