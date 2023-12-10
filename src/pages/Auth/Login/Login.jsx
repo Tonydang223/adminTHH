@@ -12,7 +12,7 @@ const FormItem = Form.Item;
 
 export default function Login() {
   const [login, loginResults] = useLoginMutation();
-  const [logout] = useLogoutMutation();
+  const [logout, {isSuccess, isLoading}] = useLogoutMutation();
   const navigate = useNavigate();
   const {token} = useSelector(state => state.user);
 
@@ -51,7 +51,10 @@ export default function Login() {
     if(token) {
         navigate('/');
     }
-  }, [token])
+    if(isSuccess) {
+      navigate('/login');
+    }
+  }, [token, isLoading])
   return (
     <div className="wrapperForm">
       <div className="boxForm">
