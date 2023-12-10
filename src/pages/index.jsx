@@ -24,7 +24,7 @@ export default function MainPages() {
       <Routes>
         <Route path="/" element={<LayoutCore />}>
           <Route element={<RequiredRoute />}>
-            <Route index element={<Main />} />
+            <Route path="/" element={<Main />} />
 
             <Route path="course" element={<MainCourseLayout />}>
               <Route index element={<Courses />} />
@@ -46,9 +46,9 @@ export default function MainPages() {
             <Route path="user" element={<MainUser />} />
             <Route path="profile" element={<Profile />} />
           </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <ModalFirm />
     </>
